@@ -1,3 +1,6 @@
+set nocp                    " 'compatible' is not set
+filetype plugin on          " plugins are enabled
+
 syntax on
 
 let mapleader=" " " remapping leader key
@@ -38,21 +41,10 @@ set wildmenu
 " dialogue asking if you wish to save changed files.
 set confirm
 
+set ruler 
 set tags=tags;/
 set laststatus=2
-
-" StatusBar
-set statusline=
-set statusline=\ %m " modified
-set statusline+=\ %r "readonly ? 
-set statusline+=\%y "filetype
-set statusline+=\ %F "full path
-set statusline+=%= "Right side settings
-set statusline+=Line
-set statusline+=\ %l
-set statusline+=\ of
-set statusline+=\ %L\,
-set statusline+=\ %P
+set showtabline=2
 
 call plug#begin('~/.vim/plugged')
 
@@ -67,12 +59,11 @@ if $TERM_PROGRAM =~ "iTerm"
 endif
 
 " Spell check
-set spell spelllang=en
+nmap <leader>s :set spell spelllang=en_ca<Enter>
 
 " Remove the directory banner in when opening file explore in vim
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
+let g:netrw_browse_split = 3
 let g:netrw_winsize = 25
-nmap <leader>f :Vex<Enter>
+nmap <leader>f :Lex<Enter>
