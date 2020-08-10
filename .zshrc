@@ -80,6 +80,9 @@ bindkey "^?" backward-delete-char
 
 # Dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# map nvim to vim
+alias vim=nvim
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
