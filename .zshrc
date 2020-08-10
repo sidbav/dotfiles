@@ -17,7 +17,7 @@ ZSH_THEME="ys"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -73,7 +73,13 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+# Set vim key bindings in terminal
+bindkey -v
+bindkey -M viins 'jj' vi-cmd-mode
+bindkey "^?" backward-delete-char
 
+# Dotfiles
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -97,23 +103,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Vim keybinds in terminal
-bindkey -v
-# Backspace
-bindkey "^?" backward-delete-char
-# Binding jj to escape
-bindkey -M viins jj vi-cmd-mode
-
-function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    RPS2=$RPS1
-    zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
-
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias vim="nvim"
-alias vi="nvim"
-alias v="vim"
