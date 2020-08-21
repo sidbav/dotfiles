@@ -6,7 +6,7 @@ Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 let mapleader=" " " remapping leader key
-nmap <leader>q :q<ENTER>
+nmap <leader>qa :q<ENTER>
 nmap <leader>w :w<ENTER>
 nmap <leader>W :wq<ENTER>
 
