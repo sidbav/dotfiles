@@ -6,7 +6,7 @@ Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 let mapleader=" " " remapping leader key
-nmap <leader>qa :q<ENTER>
+nmap <leader>q :qa<ENTER>
 nmap <leader>w :w<ENTER>
 nmap <leader>W :wq<ENTER>
 
@@ -17,12 +17,13 @@ set shiftwidth=2
 set list listchars=tab:->,trail:·
 set expandtab
 set incsearch
-set relativenumber number
+set number
 set numberwidth=5
 set smartcase
 set ignorecase
 set hlsearch
 set smartindent
+set autoindent
 set noerrorbells
 set noswapfile
 
