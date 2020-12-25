@@ -30,8 +30,6 @@ set noswapfile
 set colorcolumn=80
 highlight ColorColumn ctermbg=235 guibg=#222222
 
-imap jj <Esc>
-
 " Reload files modified outside vim
 set autoread
 
@@ -67,4 +65,12 @@ augroup markdownSpell
     autocmd!
     autocmd FileType markdown setlocal spell
     autocmd BufRead,BufNewFile *.md setlocal spell
+augroup END
+
+" Center screen when entering insert mode
+augroup autoCenter
+  autocmd!
+  autocmd InsertCharPre,InsertEnter * if (winline() * 3 >= (winheight(0) * 2))
+                                            \| norm! zz
+                                        \| endif
 augroup END
