@@ -7,8 +7,7 @@ call plug#end()
 
 let mapleader=" " " remapping leader key
 nmap <leader>q :qa<ENTER>
-nmap <leader>w :w<ENTER>
-nmap <leader>W :wq<ENTER>
+nmap <leader>w :botright vnew<ENTER>
 
 set backspace=indent,eol,start
 
@@ -67,10 +66,4 @@ augroup markdownSpell
     autocmd BufRead,BufNewFile *.md setlocal spell
 augroup END
 
-" Center screen when entering insert mode
-augroup autoCenter
-  autocmd!
-  autocmd InsertCharPre,InsertEnter * if (winline() * 3 >= (winheight(0) * 2))
-                                            \| norm! zz
-                                        \| endif
-augroup END
+
