@@ -126,3 +126,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# Omnetpp
+export PATH=$HOME/omnetpp-5.6.1/bin:$HOME/omnetpp-5.6.1/tools/macosx/bin:$PATH
+export QT_PLUGIN_PATH=$HOME/omnetpp-5.6.1/tools/macosx/plugins
+

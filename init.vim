@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-fugitive'
 Plug 'tomasiser/vim-code-dark'
 
 call plug#end()
@@ -66,4 +65,4 @@ augroup markdownSpell
     autocmd BufRead,BufNewFile *.md setlocal spell
 augroup END
 
-
+set linebreak
