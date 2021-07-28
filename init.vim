@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'tomasiser/vim-code-dark'
-Plug 'gruvbox-community/gruvbox'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -45,13 +45,10 @@ set laststatus=2
 set showtabline=2
 
 set background=dark
-let g:gruvbox_contrast_dark = "high"
-let g:gruvbox_invert_selection = "0"
 set t_Co=256
-colorscheme gruvbox
-
-" Needed so that the colorscheme works correctly in vim
-"set background=dark
+colorscheme codedark
+let g:airline_theme = 'codedark'
+let g:airline_detect_paste=1
 
 " Spell check
 nmap <leader>s :set spell spelllang=en_ca<Enter>
