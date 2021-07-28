@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'tomasiser/vim-code-dark'
+Plug 'gruvbox-community/gruvbox'
 
 call plug#end()
 
@@ -43,10 +44,14 @@ set tags=tags;/
 set laststatus=2
 set showtabline=2
 
-colorscheme codedark
-" Needed so that the colorscheme works correctly in vim
 set background=dark
+let g:gruvbox_contrast_dark = "high"
+let g:gruvbox_invert_selection = "0"
 set t_Co=256
+colorscheme gruvbox
+
+" Needed so that the colorscheme works correctly in vim
+"set background=dark
 
 " Spell check
 nmap <leader>s :set spell spelllang=en_ca<Enter>
@@ -66,3 +71,4 @@ augroup markdownSpell
 augroup END
 
 set linebreak
+
