@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'tomasiser/vim-code-dark'
-Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -47,8 +46,6 @@ set showtabline=2
 set background=dark
 set t_Co=256
 colorscheme codedark
-let g:airline_theme = 'codedark'
-let g:airline_detect_paste=1
 
 " Spell check
 nmap <leader>s :set spell spelllang=en_ca<Enter>
