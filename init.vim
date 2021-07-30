@@ -66,3 +66,26 @@ augroup END
 
 set linebreak
 
+" Primagean Recommendations
+" Keep search centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Dont undo an entire line
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap [ [<c-g>u
+inoremap ] ]<c-g>u
+inoremap ) )<c-g>u
+inoremap ( (<c-g>u
+
+" Better indent stuff
+vnoremap < <gv
+vnoremap > >gv
+
+" Moving the highlighted area of the code 
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
