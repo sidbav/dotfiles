@@ -131,3 +131,4 @@ unset __conda_setup
 export PATH=$HOME/omnetpp-5.6.1/bin:$HOME/omnetpp-5.6.1/tools/macosx/bin:$PATH
 export QT_PLUGIN_PATH=$HOME/omnetpp-5.6.1/tools/macosx/plugins
 
+export PATH="/usr/local/opt/llvm/bin:$PATH"
