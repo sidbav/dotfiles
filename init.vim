@@ -91,6 +91,8 @@ vnoremap > >gv
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+set completeopt=menuone,noinsert,noselect
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 " Language Server?
 lua << EOF
 local nvim_lsp = require('lspconfig')
